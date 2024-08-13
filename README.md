@@ -34,3 +34,11 @@ Este proyecto es una aplicación de Android que muestra una lista de productos u
    git clone https://github.com/tu-usuario/liverpool.git
    
 2. Configura el nav_graph para que funcione con el SecondFragment
+
+3. ![image](https://github.com/user-attachments/assets/d2a045d9-3c9b-4511-86c4-7b85fe2d57e3)
+4. ![Screenshot_20240813_130350](https://github.com/user-attachments/assets/2526d6d8-480f-4354-9ce9-5b8fb58c37e0)
+
+   ## Captura de Pantalla
+
+<img src="https://github.com/usuario/repositorio/blob/master/assets/captura.png?raw=true" alt="Captura de pantalla de la aplicación" width="600" height="400">
+
