@@ -88,6 +88,11 @@ class ProductGridAdapter(
                 textPrice.paintFlags = textPrice.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
             }
 
+            // ocultar precio promocional si es igual al precio de lista
+            if (product.promoPrice == product.listPrice) {
+                textPromotionalPrice.visibility = View.GONE
+            }
+
             // Cargar la imagen usando Glide
             Glide.with(itemView.context)
                 .load(product.lgImage) // Usa la URL de la imagen de tamaño grande

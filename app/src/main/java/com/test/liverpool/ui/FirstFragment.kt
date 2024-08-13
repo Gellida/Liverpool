@@ -19,7 +19,6 @@ class FirstFragment : Fragment() {
     private lateinit var viewModel: ProductViewModel
     private lateinit var repository: ProductRepository
     private lateinit var api: Api
-    private lateinit var adapter: ProductAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,19 +38,6 @@ class FirstFragment : Fragment() {
 
         // Usa un factory para pasar el repositorio al ViewModel
         viewModel = ViewModelProvider(this, ProductViewModelFactory(repository)).get(ProductViewModel::class.java)
-
-
-        adapter = ProductAdapter()
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(context)
-
-        viewModel.products.observe(viewLifecycleOwner) { products ->
-            adapter.submitList(products)
-        }
-
-        viewModel.fetchProducts("smartwatch", 1)
     }
-
-
 
 }
