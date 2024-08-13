@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "743392938468",
+    "project_id": "liverpool-3ce77",
+    "storage_bucket": "liverpool-3ce77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743392938468:android:bc9b7ba355fef491ac1ff1",
+        "android_client_info": {
+          "package_name": "com.test.liverpool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjL7N2W5ei0Q_liVeTO4NCRXRNP3WudlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

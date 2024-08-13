@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_relevance"
+        android:title="Relevancia"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/filter_lowest_price"
+        android:title="Menor precio"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/filter_highest_price"
+        android:title="Mayor precio"
+        android:iconTint="@color/white"/>
+</menu>
