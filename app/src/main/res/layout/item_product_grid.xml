@@ -23,46 +23,56 @@
         <TextView
             android:id="@+id/text_name"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:text="Product"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_product" />
+
         <TextView
             android:id="@+id/text_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:text="$0.00"
-            android:layout_margin="8dp"
-            android:textSize="14sp"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@+id/text_name"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/text_promotional_price"
+            app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
         <TextView
             android:id="@+id/text_promotional_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="16dp"
             android:text="$0.00"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/text_price"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
         <TextView
             android:id="@+id/text_colors"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Colores"
+            android:text=""
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_price" />
+
+        <LinearLayout
+            android:id="@+id/colorContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_colors"
+            app:layout_constraintTop_toBottomOf="@+id/text_promotional_price" ></LinearLayout>
 
         <TextView
             android:id="@+id/text_rating"

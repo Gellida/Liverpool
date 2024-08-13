@@ -11,12 +11,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.test.liverpool.R
 import com.test.liverpool.data.source.RetrofitConfig
 import com.test.liverpool.data.usecases.GetProductsUseCase
-import com.test.liverpool.databinding.FragmentSecond2Binding
+import com.test.liverpool.databinding.FragmentSecondBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SecondFragment : Fragment() {
-    private lateinit var binding: FragmentSecond2Binding
+    private lateinit var binding: FragmentSecondBinding
     private lateinit var viewModel: ProductViewModel
     private lateinit var productGridAdapter: ProductGridAdapter
 
@@ -24,7 +24,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSecond2Binding.inflate(inflater, container, false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 

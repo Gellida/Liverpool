@@ -18,5 +18,5 @@
         android:id="@+id/secondFragment2"
         android:name="com.test.liverpool.ui.SecondFragment"
         android:label="fragment_second2"
-        tools:layout="@layout/fragment_second2" />
+        tools:layout="@layout/fragment_second" />
 </navigation>
