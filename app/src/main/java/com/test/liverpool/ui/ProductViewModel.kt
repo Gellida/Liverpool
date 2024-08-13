@@ -8,9 +8,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.test.liverpool.data.model.Record
 import com.test.liverpool.data.repositories.ProductRepository
+import com.test.liverpool.data.usecases.GetProductsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-
-class ProductViewModel(private val repository: ProductRepository) : ViewModel() {
+import javax.inject.Inject
+@HiltViewModel
+class ProductViewModel @Inject constructor(
+    private val repository: ProductRepository
+) : ViewModel() {
 
     private val _products = MutableLiveData<List<Record>>()
     val products: LiveData<List<Record>> = _products
@@ -29,6 +34,18 @@ class ProductViewModel(private val repository: ProductRepository) : ViewModel() 
             }
         }
     }
+    /*
+    fun fetchnewProducts(searchString: String) {
+        viewModelScope.launch {
+            val response = repository.getProducts(searchString,1)
+
+            val result = GetProductsUseCase(repository)
+            _products.value = result
+            }
+        }
+    }
+     */
+
 
     fun getProductSortedByLowestPrice(searchString: String, pageNumber: Int){
         viewModelScope.launch {

@@ -1,4 +1,4 @@
-package com.test.liverpool.data
+package com.test.liverpool.data.source
 
 import com.test.liverpool.data.model.ProductsResponse
 import com.test.liverpool.data.model.SortOption
@@ -7,7 +7,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface Api {
-
     @GET("appclienteservices/services/v3/plp")
     suspend fun getProducts(
         @Query("search-string") searchString: String,

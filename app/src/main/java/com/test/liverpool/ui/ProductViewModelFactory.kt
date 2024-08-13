@@ -3,8 +3,10 @@ package com.test.liverpool.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.test.liverpool.data.repositories.ProductRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ProductViewModelFactory(
+class ProductViewModelFactory @Inject constructor(
     private val repository: ProductRepository
 ) : ViewModelProvider.Factory {
 

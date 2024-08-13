@@ -12,8 +12,11 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity @Inject constructor() : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var navController: NavController
 

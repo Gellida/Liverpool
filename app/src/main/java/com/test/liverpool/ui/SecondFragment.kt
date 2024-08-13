@@ -1,24 +1,20 @@
 package com.test.liverpool.ui
 
 import android.os.Bundle
-import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.PopupMenu
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.test.liverpool.R
-import com.test.liverpool.data.Api
-import com.test.liverpool.data.RetrofitConfig
-import com.test.liverpool.data.RetrofitInstance
-import com.test.liverpool.data.repositories.ProductRepository
-import com.test.liverpool.databinding.FragmentFirstBinding
+import com.test.liverpool.data.source.RetrofitConfig
+import com.test.liverpool.data.usecases.GetProductsUseCase
 import com.test.liverpool.databinding.FragmentSecond2Binding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecond2Binding
     private lateinit var viewModel: ProductViewModel
@@ -36,6 +32,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val retrofitConfig = RetrofitConfig()
+        val getProductsUseCase = GetProductsUseCase(retrofitConfig.repository)
 
         viewModel = ViewModelProvider(this, ProductViewModelFactory(retrofitConfig.repository)).get(ProductViewModel::class.java)
 
