@@ -35,9 +35,6 @@ Este proyecto es una aplicación de Android que muestra una lista de productos u
    
 2. Configura el nav_graph para que funcione con el SecondFragment
 
-   ## Captura de Pantalla
-
-6. <img src="https://github.com/user-attachments/assets/d2a045d9-3c9b-4511-86c4-7b85fe2d57e3" alt="Captura de pantalla de la aplicación" width="auto" height="100%">
 
 
  
